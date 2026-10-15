@@ -1,0 +1,164 @@
+<!doctype html>
+<!-- DRAFT FOR LEGAL REVIEW. Matches the in-app statement (apps/web/app/accessibility). Not yet approved by a lawyer. -->
+<html lang="en-GB">
+<head><!-- @head -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accessibility · Raicita</title>
+<meta name="description" content="How accessible Raicita is today, the problems we know about, and how to tell us what doesn&#x27;t work for you.">
+<meta name="theme-color" content="#fbf6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121016" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://raicita.github.io/accessibility/">
+<link rel="alternate" hreflang="en" href="https://raicita.github.io/accessibility/">
+<link rel="alternate" hreflang="zh-Hans" href="https://raicita.github.io/zh/accessibility/">
+<link rel="alternate" hreflang="x-default" href="https://raicita.github.io/accessibility/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raicita">
+<meta property="og:title" content="Accessibility · Raicita">
+<meta property="og:description" content="How accessible Raicita is today, the problems we know about, and how to tell us what doesn&#x27;t work for you.">
+<meta property="og:url" content="https://raicita.github.io/accessibility/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:image" content="https://raicita.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Raicita: AI companions for adults. Every character is AI.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accessibility · Raicita">
+<meta name="twitter:description" content="How accessible Raicita is today, the problems we know about, and how to tell us what doesn&#x27;t work for you.">
+<meta name="twitter:image" content="https://raicita.github.io/assets/img/og.png">
+<!-- /@head --></head>
+<body>
+<!-- @header -->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Raicita · Home">
+      <img src="../assets/img/icon.svg" alt="" width="34" height="34">
+      <b>Raicita</b><small lang="zh-Hans">根芽</small>
+    </a>
+    <nav class="nav" aria-label="Menu">
+    <a href="../#features">Features</a>
+    <a href="../coins/">Coins</a>
+    <a href="../safety/">Safety</a>
+    <a href="../privacy/">Privacy</a>
+    </nav>
+    <div class="head-actions">
+      <a class="lang" href="../zh/accessibility/" hreflang="zh-Hans" lang="zh-Hans" aria-label="阅读中文版"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>中文</a>
+      <a class="btn pri sm" href="https://app.raicita.app">Open the app</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <div class="menu-panel">
+        <a href="../#features">Features</a>
+        <a href="../coins/">Coins</a>
+        <a href="../safety/">Safety</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="https://app.raicita.app">Open the app</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+<!-- /@header -->
+<main id="main">
+<div class="wrap narrow">
+<header class="page-head">
+  <p class="eyebrow">Legal</p>
+  <h1>Accessibility</h1>
+  <p class="updated">Last updated: <time datetime="2026-10-15">15 October 2026</time></p>
+</header>
+<nav class="toc" aria-labelledby="toc-title"><!-- @toc -->
+  <h2 id="toc-title">Contents</h2>
+  <ol>
+    <li><a href="#works">1. What works now</a></li>
+    <li><a href="#gaps">2. Known problems</a></li>
+    <li><a href="#website">3. This website</a></li>
+    <li><a href="#contact">4. Tell us what doesn't work for you</a></li>
+  </ol>
+<!-- /@toc --></nav>
+<div class="prose">
+
+<p>We want everyone to be able to use Raicita. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA. We aren't there yet, and no one outside the team has audited the app so far. This page says honestly where things stand.</p>
+
+<h2 id="works">1. What works now</h2>
+<ul>
+  <li>Buttons and links are real buttons and links, so you can reach them with a keyboard or switch, with a visible focus outline.</li>
+  <li>Icon-only buttons have spoken labels for screen readers, in English and Chinese.</li>
+  <li>Text follows your browser zoom and text size settings.</li>
+  <li>If your device asks for reduced motion, we switch animations off.</li>
+  <li>Every voice and video call shows live captions of what you and the character say.</li>
+  <li>Voice messages are optional: you can always type instead.</li>
+</ul>
+
+<h2 id="gaps">2. Known problems</h2>
+<ul>
+  <li>Photos and clips the characters send have no text description yet.</li>
+  <li>Voice messages from characters don't always show a transcript.</li>
+  <li>Some pop-up panels don't yet keep keyboard focus inside them while open. Press Escape to close one.</li>
+  <li>The message menu opens with a long press or right-click (Shift+F10 on a keyboard); there is no visible button for it yet.</li>
+  <li>The animated character in video calls is decorative and has no audio description; the captions carry the conversation.</li>
+  <li>Some pale secondary text may not meet the recommended colour contrast. We haven't measured every screen yet.</li>
+  <li>We haven't yet tested every screen at high zoom levels or with every screen reader.</li>
+</ul>
+<p>We're working through these and will update this page as each one is fixed.</p>
+
+<h2 id="website">3. This website</h2>
+<p>This website uses plain HTML with headings, landmarks and a skip link, works with a keyboard, follows your light or dark mode and reduced-motion settings, and gives every image a text description.</p>
+
+<h2 id="contact">4. Tell us what doesn't work for you</h2>
+<p>If something is hard or impossible to use, or you need information in a different format, email <a href="mailto:support@raicita.app">support@raicita.app</a>. Tell us the page and what you were trying to do. A person will reply.</p>
+<p>If you're not happy with how we respond, you can contact the <a href="https://www.equalityadvisoryservice.com/">Equality Advisory and Support Service (EASS)</a>.</p>
+<p>Last reviewed 15 October 2026 by our own team. Raicita Ltd · United Kingdom</p>
+<p><a class="back-top" href="#main">Back to top</a></p>
+
+</div>
+</div>
+</main>
+<!-- @footer -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../"><img src="../assets/img/icon.svg" alt="" width="34" height="34"><b>Raicita</b></a>
+        <p>An AI companion app for adults. Every character is AI, not a person, and is not a substitute for professional help.</p>
+        <p><strong>For adults 18+ only.</strong></p>
+        <p>In crisis? In the UK call Samaritans on <a href="tel:116123">116 123</a>. In the US call or text <a href="tel:988">988</a>. Elsewhere, see <a href="https://findahelpline.com">findahelpline.com</a>.</p>
+      </div>
+      <nav aria-labelledby="foot-legal-en">
+        <h2 id="foot-legal-en">Legal</h2>
+        <ul>
+          <li><a href="../terms/">Terms of Service</a></li>
+          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="../guidelines/">Community Guidelines</a></li>
+          <li><a href="../coins/">Coins &amp; Payments</a></li>
+          <li><a href="../safety/">AI &amp; Safety</a></li>
+          <li><a href="../cookies/">Cookie Notice</a></li>
+          <li><a href="../accessibility/">Accessibility</a></li>
+          <li><a href="../imprint/">Imprint &amp; Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Help &amp; contact</h2>
+        <ul>
+          <li>Support: <a href="mailto:support@raicita.app">support@raicita.app</a></li>
+          <li><a href="https://app.raicita.app">Web app</a></li>
+          <li><a href="https://app.raicita.app/download">Android app</a></li>
+          <li><a href="../zh/accessibility/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p>© 2026 Raicita Ltd · United Kingdom</p>
+      <p>raicita.app</p>
+    </div>
+  </div>
+</footer>
+<!-- /@footer -->
+</body>
+</html>
