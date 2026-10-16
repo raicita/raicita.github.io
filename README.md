@@ -24,7 +24,7 @@ Keep it that way: don't add trackers, embeds, CDN links or Google Fonts.
 
 | Path | What |
 | --- | --- |
-| `index.html`, `zh/index.html` | Home page (English at `/`, Chinese at `/zh/`) |
+| `index.html`, `zh/index.html` | Home page (English at `/`, Chinese at `/zh/`): highlights, features, characters, packages and prices, safety, FAQ |
 | `terms/` `privacy/` `guidelines/` `coins/` `safety/` `cookies/` `accessibility/` `imprint/` | Legal pages, one `index.html` each; the same set under `zh/` |
 | `404.html` | Not-found page (GitHub Pages serves it for any missing path; it uses root-absolute links) |
 | `assets/css/site.css` | The only stylesheet. Colours, fonts and shapes follow the app (`apps/web/app/globals.css`); light and dark follow the visitor's system setting |
@@ -76,6 +76,10 @@ The site repeats a few things from the app repository. Keep them in step when th
 - Helplines on the AI & Safety page: `packages/shared/src/helplines.ts`.
 - AI providers in the Privacy Policy: the providers the app's consent screen lists (`GET /v1/ai/providers`).
 - Coin validity and reminder (6 months, reminder after 5): `DEFAULT_COIN_EXPIRY` in `packages/shared/src/coins.ts`.
+- Packages and prices on the home page: `COIN_PACKS` and `SUBSCRIPTION_PLANS` in `packages/shared/src/catalog.ts` (GBP;
+  EUR and USD are the defaults from `packages/shared/src/currency.ts`), coin costs from `COIN_ACTIONS` in
+  `packages/shared/src/content.ts`. These are the built-in defaults; if prices are changed in the admin (计费配置),
+  update the "Packages and prices" section in both languages.
 - Inactive-account deletion (24 months + 30 days): `packages/shared/src/retention.ts`.
 - Accessibility statement: `apps/web/app/accessibility/page.tsx`.
 
@@ -88,9 +92,10 @@ search the pages for `app.raicita.app`.
 
 ## Domain
 
-The site is built for `https://raicita.github.io`. Canonical, `hreflang`, Open Graph, `robots.txt` and the sitemap
-use that address (`SITE` in `tools/layout.py`). Page-to-page links are relative, so they work on any domain. When a
-custom domain is chosen: add a `CNAME` file, change `SITE`, update `robots.txt`, run `tools/layout.py`.
+The site is served at `https://raicita.thymoria.com` (the `CNAME` file). Canonical, `hreflang`, Open Graph,
+`robots.txt` and the sitemap use that address (`SITE` in `tools/layout.py` and `tools/check.py`). Page-to-page links
+are relative, so they work on any domain. To move it: change `CNAME`, both `SITE` values and `robots.txt`, then run
+`tools/layout.py`.
 
 ## Tools
 

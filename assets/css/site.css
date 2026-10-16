@@ -185,6 +185,67 @@ section.block.alt{background:var(--ink);border-top:1px solid var(--line);border-
 .age-band p{margin:0;flex:1;min-width:240px;font-weight:600}
 .age-band a{color:var(--on-accent)}
 
+/* ---------- home: stats, highlights, pricing, FAQ ---------- */
+.stats-band{padding:0 0 8px}
+.stats{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:860px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stats li{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.stats b{font-family:var(--f-display);font-size:2.2rem;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats span{color:var(--muted);font-size:.95rem;line-height:1.4}
+
+.highlights{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));list-style:none;padding:0;margin:0}
+.highlights li{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;position:relative;overflow:hidden}
+.highlights li::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);opacity:.8}
+.highlights .ic{width:48px;height:48px;border-radius:14px;background:var(--grad);color:var(--on-accent)}
+.highlights h3{margin:14px 0 6px;font-size:1.3rem}
+.highlights p{margin:0;color:var(--muted)}
+@media (max-width:360px){.highlights{grid-template-columns:minmax(0,1fr)}}
+.features.more{margin-top:40px}
+
+.sub{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-size:1.35rem;margin:8px 0 14px}
+.sub span{font-family:var(--f-body);font-size:.9rem;font-weight:600;color:var(--muted)}
+.plans{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr))}
+@media (min-width:700px){.plans{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}}
+.plans.two{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.plans li{margin:0;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 20px 20px;display:flex;flex-direction:column;gap:4px}
+.plans li.pop{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.plans .badge{position:absolute;top:14px;right:14px;font-size:.75rem;font-weight:800;padding:3px 9px;border-radius:99px;background:var(--grad);color:var(--on-accent)}
+.plans p{margin:0}
+@media (max-width:699px){.plans .badge{position:static;align-self:flex-start;order:-1;margin-bottom:6px}}
+.plans .coins{color:var(--muted);font-weight:600}
+.plans .coins b{display:block;font-family:var(--f-display);font-size:2.1rem;line-height:1.15;color:var(--text)}
+.plans .price{margin-top:10px}
+.plans .price b{font-size:1.5rem;font-weight:800}
+.plans .price small{font-size:.95rem;color:var(--muted);font-weight:600;margin-left:2px}
+.plans .price-alt{font-size:.88rem;color:var(--faint)}
+.plans .eg{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:.92rem;color:var(--muted)}
+.price-note{max-width:60em;margin:-8px 0 28px}
+.muted{color:var(--muted)}
+.costs{width:100%;border-collapse:collapse;font-size:.98rem}
+.costs th,.costs td{padding:8px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:500}
+.costs thead th{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.costs td{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.costs thead th:last-child{text-align:right}
+.costs tr:last-child th,.costs tr:last-child td{border-bottom:0}
+.pay-title{margin-top:20px}
+.pay{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:10px}
+.pay li{margin:0;display:flex;gap:12px;align-items:flex-start}
+.pay .ic{width:38px;height:38px;flex:none}
+.pay b{display:block}
+.pay li>span:last-child{color:var(--muted);font-size:.95rem;line-height:1.45}
+.pay li>span:last-child b{color:var(--text);font-size:1rem}
+#safety .notice{margin-bottom:28px}
+.safety-show .card h3{font-size:1.15rem}
+.more-links{margin-top:24px}
+
+.faq{display:grid;gap:10px;margin-top:18px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:0 18px}
+.faq summary{cursor:pointer;font-weight:700;padding:16px 28px 16px 0;position:relative;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:12px;font-size:1.4rem;line-height:1;color:var(--accent);font-weight:600}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin:0 0 16px;color:var(--muted)}
+
 /* ---------- prose / legal ---------- */
 .page-head{padding:44px 0 8px}
 .page-head h1{font-size:clamp(2rem,5vw,3rem)}

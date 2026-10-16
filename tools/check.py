@@ -19,7 +19,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://raicita.github.io"
+SITE = "https://raicita.thymoria.com"
 SKIP_DIRS = {".git", "tools", "node_modules"}
 
 try:

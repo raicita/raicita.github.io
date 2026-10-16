@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /tools/
 
-Sitemap: https://raicita.github.io/sitemap.xml
+Sitemap: https://raicita.thymoria.com/sitemap.xml

@@ -20,8 +20,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Where the site is served. Change this (and add a CNAME file) once the domain is decided.
-SITE = "https://raicita.github.io"
+# Where the site is served (the custom domain in CNAME).
+SITE = "https://raicita.thymoria.com"
 # From packages/shared/src/brand.ts (BRAND). Keep in step with the app.
 BRAND = {
     "name": "Raicita",
@@ -42,8 +42,8 @@ PAGES: dict[str, tuple[str, str, str, str]] = {
     "": (
         "Raicita · Someone who gets you",
         "根芽 Raicita · 懂你的人，一直都在",
-        "Raicita is an AI companion app for adults (18+). Chat, send voice messages and call characters who remember you. Every character is AI, and the app always says so.",
-        "根芽（Raicita）是面向成年人（18 岁以上）的 AI 陪伴应用。和记得你的角色聊天、发语音、打电话。所有角色都是 AI，应用会一直明确告诉你。",
+        "Raicita is an AI companion app for adults (18+). Chat, send voice messages and call characters who remember you. Free to sign up; pay with coins from one-off packs or monthly. Every character is AI.",
+        "根芽（Raicita）是面向成年人（18 岁以上）的 AI 陪伴应用。和记得你的角色聊天、发语音、打电话。注册免费，用金币按需付费，可买金币包或包月。所有角色都是 AI。",
     ),
     "terms": (
         "Terms of Service · Raicita",
@@ -100,7 +100,10 @@ T = {
     "en": {
         "skip": "Skip to content",
         "home": "Home",
+        "highlights": "Highlights",
         "features": "Features",
+        "pricing": "Pricing",
+        "faq": "FAQ",
         "coins": "Coins",
         "safety": "Safety",
         "privacy": "Privacy",
@@ -133,7 +136,10 @@ T = {
     "zh": {
         "skip": "跳到正文",
         "home": "首页",
+        "highlights": "亮点",
         "features": "功能",
+        "pricing": "套餐",
+        "faq": "常见问题",
         "coins": "金币",
         "safety": "安全",
         "privacy": "隐私",
@@ -250,10 +256,11 @@ def header(slug: str, lang: str) -> str:
     home = href("", lang, slug, lang)
     cur = lambda s: ' aria-current="page"' if s == slug else ""  # noqa: E731
     links = [
+        (href("", lang, slug, lang, "#highlights"), t["highlights"], None),
         (href("", lang, slug, lang, "#features"), t["features"], None),
-        (href("coins", lang, slug, lang), t["coins"], "coins"),
-        (href("safety", lang, slug, lang), t["safety"], "safety"),
-        (href("privacy", lang, slug, lang), t["privacy"], "privacy"),
+        (href("", lang, slug, lang, "#pricing"), t["pricing"], None),
+        (href("", lang, slug, lang, "#safety"), t["safety"], None),
+        (href("", lang, slug, lang, "#faq"), t["faq"], None),
     ]
     nav = "\n    ".join(f'<a href="{h}"{cur(s)}>{x}</a>' for h, x, s in links)
     menu = "\n        ".join(f'<a href="{h}">{x}</a>' for h, x, _ in links)
